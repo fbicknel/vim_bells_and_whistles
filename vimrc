@@ -42,15 +42,15 @@ set autoindent
 set showmatch
 set tabstop=4
 set shiftwidth=4
-map <c-n> :w<cr>n<cr>
-map <F3> :e#<cr>
-map <S-F3> :w<cr>e#<cr>
+nnoremap <c-n> :w<cr>n<cr>
+nnoremap <F3> :buffers<cr>:edit #
+nnoremap <S-F3> :w<cr>e#<cr>
 hi clear LineNr
 " Tabs
-map <F6> :tabe 
-map <F7> :tabp<cr>
-map <F8> :tabn<cr>
-map <F9> :mksession! ~/.vim.session
+nnoremap <F6> :tabe 
+nnoremap <F7> :tabp<cr>
+nnoremap <F8> :tabn<cr>
+nnoremap <F9> :mksession! ~/.vim.session
 let loaded_matchparen = 1
 " For python compatibility:
 set smarttab
@@ -60,15 +60,15 @@ syntax on
 set background=dark
 filetype indent plugin on
 " Some window shortcuts:
-map <F4> :86vsplit<cr>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+nnoremap <F4> :86vsplit<cr>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
 " NerdTree Browser
-map <leader>b :NERDTreeToggle<cr>
+nnoremap <leader>b :NERDTreeToggle<cr>
 " TaskList plugin (map \td to activate instead of default \t)
-map <leader>td <Plug>TaskList
+nnoremap <leader>td <Plug>TaskList
 " Tab Completion and Documentation
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
@@ -80,8 +80,8 @@ let g:pyflakes_use_quickfix = 0
 " Pep8 activation:
 let g:pep8_map='<leader>8'
 " RopeVim activation:
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+nnoremap <leader>j :RopeGotoDefinition<CR>
+nnoremap <leader>r :RopeRename<CR>
 " Ack plugin:
 nmap <leader>a <Esc>:Ack!
 " Git integration:
