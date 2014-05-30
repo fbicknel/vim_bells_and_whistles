@@ -1,15 +1,16 @@
 #!/bin/bash
 
 fail_no_git() {
-    echo "Could not find git in your path.  Fix this and try again."
+    set -
+    echo $1
     exit 2
 }
 
 cd ~/.vim
 GIT=`which git`
-[[ -x "$GIT" ]] || fail_no_git
+[[ -x "$GIT" ]] || fail_no_git "Could not find git in your path.  Fix this and try again."
 set -x
-git submodule update --init
+git submodule update --init || fail_no_git "the submodule update operation failed: maybe you need to set up CA on your host?"
 cd ~
 [[ -h .vimrc ]] && rm -f .vimrc
 [[ -f .vimrc ]] && mv .vimrc vimrc_save
