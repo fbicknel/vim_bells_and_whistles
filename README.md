@@ -7,7 +7,9 @@ Clone this to ~/.vim
 
 ```
 $ cd ~
-$ git clone github.com:fbicknel/vim_bells_and_whistles.git .vim
+$ git clone https://github.com/fbicknel/vim_bells_and_whistles.git
+
+(Or get a URL from github)
 ```
 
 Then expand all the submodules by using:
