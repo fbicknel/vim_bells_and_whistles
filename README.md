@@ -7,7 +7,8 @@ Clone this to ~/.vim
 
 ```
 $ cd ~
-$ git clone https://github.com/fbicknel/vim_bells_and_whistles.git
+[$ mv .vim vimold] # if you have one
+$ git clone https://github.com/fbicknel/vim_bells_and_whistles.git .vim
 
 (Or get a URL from github)
 ```
