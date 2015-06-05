@@ -86,3 +86,4 @@ nnoremap <leader>r :RopeRename<CR>
 nmap <leader>a <Esc>:Ack!
 " Git integration:
 " %{fugitive#statusline()}
+set scrolloff=5
