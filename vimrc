@@ -85,5 +85,7 @@ nnoremap <leader>r :RopeRename<CR>
 " Ack plugin:
 nmap <leader>a <Esc>:Ack!
 " Git integration:
-" %{fugitive#statusline()}
+" set statusline=%f\ [%4l/%2c]\ %{fugitive#statusline()}\ %m
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
 set scrolloff=5
