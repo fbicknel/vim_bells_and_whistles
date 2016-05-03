@@ -96,3 +96,4 @@ nmap <leader>a <Esc>:Ack!
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set scrolloff=5
+set hlsearch
