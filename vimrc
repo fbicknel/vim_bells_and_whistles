@@ -97,3 +97,10 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set scrolloff=5
 set hlsearch
+
+" Set up some warning if you code more than 81 characters
+" Also try guibg=#592929 for light gui backgrounds
+" Also try guibg=#ffd9d9 for dark  gui backgrounds
+" Also, ctermbg can either be red or darkred
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+match OverLength /\%81v.\+/
