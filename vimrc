@@ -1,5 +1,6 @@
 " Load Pathogen to automatically load modules from ../bundle
 filetype off
+map  :update<CR>:e +ff=dos<CR>:setlocal ff=unix<CR>:w<CR>
 call pathogen#infect()
 call pathogen#helptags()
 
