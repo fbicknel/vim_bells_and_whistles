@@ -47,7 +47,6 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'jnurmine/Zenburn' " a color scheme
 
-" git
 " git-blame.vim
 " gundo
 " makegreen
@@ -58,14 +57,12 @@ Plugin 'jnurmine/Zenburn' " a color scheme
 " supertab
 " surround
 " tasklist
-" vim-autotag
-" vim-fugitive
-" Vundle.vim
 
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -119,6 +116,7 @@ augroup JumpCursorOnEdit
  \ endif
 augroup END
 " avoid extraneous whitespace
+highlight BadWhitespace ctermbg=red guibg=red
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 if has("autocmd")
     autocmd BufReadPost fugitive://* set bufhidden=delete
