@@ -74,6 +74,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 " NerdTree Browser
 nnoremap <leader>b :NERDTreeToggle<cr>
+:let g:NERDTreeIgnore=['\.pyc$']
 " TaskList plugin (map \td to activate instead of default \t)
 nnoremap <leader>td <Plug>TaskList
 " Tab Completion and Documentation
