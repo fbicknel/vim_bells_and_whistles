@@ -35,18 +35,22 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'zivyangll/git-blame.vim'
 
-" Plugin 'scrooloose/nerdtree'
-
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
-
 Plugin 'reinh/vim-makegreen'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'gryf/pep8-vim'
+
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'jnurmine/Zenburn' " a color scheme
 
 " git
 " git-blame.vim
 " gundo
 " makegreen
-" nerdtree
-" nerdtree-git-plugin
 " pep8
 " pydoc
 " py.test
@@ -114,6 +118,8 @@ augroup JumpCursorOnEdit
  \ unlet b:doopenfold |
  \ endif
 augroup END
+" avoid extraneous whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 if has("autocmd")
     autocmd BufReadPost fugitive://* set bufhidden=delete
     autocmd User fugitive 
@@ -152,6 +158,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 " NerdTree Browser
 nnoremap <leader>b :NERDTreeToggle<cr>
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 " TaskList plugin (map \td to activate instead of default \t)
 nnoremap <leader>td <Plug>TaskList
 " Tab Completion and Documentation
@@ -175,3 +182,4 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set scrolloff=5
 set hlsearch
+colors zenburn
