@@ -47,6 +47,8 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'jnurmine/Zenburn' " a color scheme
 
+Plugin 'w0rp/ale'
+
 " git-blame.vim
 " gundo
 " makegreen
@@ -57,8 +59,6 @@ Plugin 'jnurmine/Zenburn' " a color scheme
 " supertab
 " surround
 " tasklist
-
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -187,3 +187,11 @@ set hlsearch
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 match OverLength /\%81v.\+/
 colors zenburn
+" Put these lines at the very end of your vimrc file.
+"
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
