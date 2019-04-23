@@ -71,11 +71,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 nnoremap <Leader>B :<C-u>call gitblame#echo()<CR>
 
-" Load Pathogen to automatically load modules from ../bundle
-" filetype off
-" call pathogen#infect()
-" call pathogen#helptags()
-
 " Tell vim to remember certain things when we exit
 "  '10 : marks will be remembered for up to 10 previously edited files
 "  "100 : will save up to 100 lines for each register
