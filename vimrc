@@ -31,8 +31,6 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " /end samples
 
-Plugin 'tpope/vim-fugitive'
-
 Plugin 'zivyangll/git-blame.vim'
 
 Plugin 'reinh/vim-makegreen'
