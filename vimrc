@@ -41,13 +41,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-Plugin 'gryf/pep8-vim'
-
-Plugin 'kien/ctrlp.vim'
-
 Plugin 'jnurmine/Zenburn' " a color scheme
-
-Plugin 'w0rp/ale'
 
 " git-blame.vim
 " gundo
@@ -165,10 +159,6 @@ let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 " Toggle Gundo code diffs:
 :map <leader>g :GundoToggle<CR>
-" Pyflakes quickfix window off:
-let g:pyflakes_use_quickfix = 0
-" Pep8 activation:
-let g:pep8_map='<leader>8'
 " RopeVim activation:
 nnoremap <leader>j :RopeGotoDefinition<CR>
 nnoremap <leader>r :RopeRename<CR>
@@ -187,11 +177,3 @@ set hlsearch
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 match OverLength /\%81v.\+/
 colors zenburn
-" Put these lines at the very end of your vimrc file.
-"
-" Load all plugins now.
-" Plugins need to be added to runtimepath before helptags can be generated.
-packloadall
-" Load all of the helptags now, after plugins have been loaded.
-" All messages and errors will be ignored.
-silent! helptags ALL
