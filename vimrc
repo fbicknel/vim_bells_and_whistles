@@ -31,6 +31,8 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " /end samples
 
+Plugin 'vim-syntastic/syntastic'
+
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'zivyangll/git-blame.vim'
@@ -163,6 +165,8 @@ nmap <leader>a <Esc>:Ack!
 " set statusline=%f\ [%4l/%2c]\ %{fugitive#statusline()}\ %m
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_python_checkers = ['pylint']
 set scrolloff=5
 set hlsearch
 " Set up some warning if you code more than 81 characters
@@ -172,3 +176,5 @@ set hlsearch
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 match OverLength /\%81v.\+/
 colors zenburn
+highlight SpellBad   ctermfg=190 ctermbg=196 guifg=#dfff00 guibg=#ff0000
+highlight SpellCap   ctermfg=123 ctermbg=021 guifg=#87ffff guibg=#0000ff
